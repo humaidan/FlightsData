@@ -69,8 +69,25 @@ while recs < total_records:
 
     delay_mins = random.choice( range(-99, 99) )
     ata_time = sta_time + datetime.timedelta(minutes=delay_mins) + datetime.timedelta(seconds=random.choice( range(59) ))
+    # delay_mins_lst = list(range(-15, 15))
+    # delay_mins_probs_lst = [ 0.34 for _ in range(-15, 15) ]
 
-    # print(arrFlight, depFlight, ACType, bookload, route, sta_time, ata_time)
+    # delay_mins_lst.append([x for x in range (-60, -16)])
+    # delay_mins_lst.append([x for x in range (16, 60)])
+    # delay_mins_probs_lst.append( [0.135 for _ in range (-60, -16)] )
+    # delay_mins_probs_lst.append(range (16, 60))
+
+    # delay_mins_lst.append([x for x in range (-120, -61)])
+    # delay_mins_lst.append([x for x in range (61, 120)])
+    # delay_mins_probs_lst.append( [0.235 for _ in range (-120, -61)] )
+    # delay_mins_probs_lst.append(range (61, 120))
+
+    # delay_mins = random.choices(delay_mins_lst, weights=delay_mins_probs_lst, k=1)[0]
+    # ata_time = sta_time + datetime.timedelta(minutes=delay_mins) + datetime.timedelta(seconds=random.choice( range(59) ))
+
+
+
+    # print(arrFlight, ACType, bookload, sta_time, ata_time, routes[0], routes[1])
     df.loc[len(df.index)] = [arrFlight, ACType, bookload, sta_time, ata_time, routes[0], routes[1]]
 
     recs += 1

@@ -1,6 +1,6 @@
 CONFIG = {
     'total_records': 10_000,
-    'average_per_month': 4000,
+    'average_per_month': 5000,
     'last_date': '2022-10-31 23:59:00',
     'peaks':
     {
